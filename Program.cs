@@ -2,14 +2,17 @@
 // и возводит число A в натуральную степень B.
 
 int ferstNum = Input("Введите число А"),
-    secondNum = Input("Введите число В"),
-    result = 1;
+    secondNum = Input("Введите число В");
+double result = 1;
 
-secondNum = Module(secondNum);
-for(int i = 0; i < secondNum; i++)
+for(int i = 0; i < Module(secondNum); i++)
 {
     result *= ferstNum;
 }
+if(secondNum < 0)
+    {
+        result = 1/result;
+    }
 Console.WriteLine($"Число А в степени В: {result}");
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
